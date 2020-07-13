@@ -1,6 +1,5 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
-import nba from 'nba-api-client'
 
 
 
@@ -10,9 +9,8 @@ export default function GetDashboardData() {
   const [NBATeamData, setNBATeamData] = useState([])
   const [teamIDOne, setTeamIDOne] = useState()
   const [teamOneNBAData, setTeamOneNBAData] = useState([])
-  const [teamIDTwo, setTeamIDTwo] = useState()
-  const [teamTwoNBAData, setTeamTwoNBAData] = useState([])
-
+  const [game, setGame] = useState({})
+  const [gameDetails, setGameDetails] = useState([])
 
   const updateTeamOneNBAData = async (teamID) => {
     setTeamIDOne(teamID)
@@ -21,10 +19,10 @@ export default function GetDashboardData() {
     setTeamOneNBAData(data.data.data)
   }
 
-  const updateTeamTwoNBAData = async (teamID) => {
-    setTeamIDTwo(teamID)
-    const data = await axios.get(`https://www.balldontlie.io/api/v1/games?seasons[]=2019&team_ids[]=${teamID}`)
-    setTeamTwoNBAData(data.data.data)
+  const updateGameDetails = async (gameID) => {
+    const data = await axios.get(`https://www.balldontlie.io/api/v1/stats?game_ids[]=${gameID}`)
+    setGameDetails(data.data.data)
+
   }
 
   const getNBAPlayerData = async () => {
@@ -49,5 +47,5 @@ export default function GetDashboardData() {
   }, [])
 
 
-  return {teamOneNBAData, updateTeamOneNBAData, teamTwoNBAData, updateTeamTwoNBAData, NBAPlayerData, getNBAPlayerData, NBATeamData, getNBATeamData, teamIDOne, setTeamIDOne, teamIDTwo, setTeamIDTwo}
+  return {game, setGame, teamOneNBAData, updateTeamOneNBAData, NBAPlayerData, getNBAPlayerData, NBATeamData, getNBATeamData, teamIDOne, setTeamIDOne, updateGameDetails, gameDetails}
 }

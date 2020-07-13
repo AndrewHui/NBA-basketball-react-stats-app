@@ -1,6 +1,5 @@
 import React from 'react'
 import EachTeamDropdown from './eachTeamDropdown'
-import DashboardStats from '../dashboardStats'
 
 
 export default function TeamDropdown({NBATeamData, dropdownName, setTeamID}) {
