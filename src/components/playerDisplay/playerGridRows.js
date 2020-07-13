@@ -9,5 +9,7 @@ return <tr>
 <td>{playerData.pts}</td>
 <td>{playerData.ast}</td>
 <td>{playerData.reb}</td>
+<td>{playerData.stl}</td>
+<td>{playerData.blk}</td>
   </tr>
 }

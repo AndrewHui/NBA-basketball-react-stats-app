@@ -13,6 +13,8 @@ return <div>
     <th scope="col">Points</th>
     <th scope="col">Assists</th>
     <th scope="col">Rebounds</th>
+    <th scope="col">Steals</th>
+    <th scope="col">Blocks</th>
   </tr>
 </thead>
 <tbody>
