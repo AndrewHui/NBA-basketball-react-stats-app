@@ -4,7 +4,7 @@ import PlayerGridRow from './playerGridRows'
 export default function PlayerGridDisplay({gameDetails}) {
 
   console.log(gameDetails)
-return <div>
+return <div className='playerGrid'>
   <table class="table">
 <thead class="thead-dark">
   <tr>

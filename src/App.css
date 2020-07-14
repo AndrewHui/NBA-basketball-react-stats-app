@@ -52,6 +52,7 @@
 .dropdown {
   position: relative;
   display: inline-block;
+
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -62,6 +63,8 @@
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  max-height:175px;
+  overflow:auto;
 }
 
 /* Links inside the dropdown */
@@ -83,4 +86,25 @@
 
 .abbreviation-highlight {
   background-color: lightgray;
+}
+
+header {
+  display: flex;
+  justify-content: start;
+  margin: 20px;
+}
+
+.teamSelected {
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+body {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.playerGrid {
+  border-left: 6px solid green;
+  height: 580px;
 }
