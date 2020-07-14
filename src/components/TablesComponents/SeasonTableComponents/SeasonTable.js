@@ -1,10 +1,10 @@
 import React from 'react'
 import SeasonRows from './SeasonRows'
 
-export default function SeasonTable({selectedTeamsSeasonData, selectedTeamID, NBATeamData,updateGameDetails}) {
+export default function SeasonTable({selectedTeamsSeasonData, selectedTeamID, NBATeamData, getGameStats}) {
 
   const listGames = (selectedTeamsSeasonData) => {
-    return selectedTeamsSeasonData.map(teamGameData => <SeasonRows teamGameData = {teamGameData} selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} updateGameDetails = {updateGameDetails}/>)
+    return selectedTeamsSeasonData.map(game => <SeasonRows game = {game} selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} getGameStats = {getGameStats}/>)
   }
   
   return (
