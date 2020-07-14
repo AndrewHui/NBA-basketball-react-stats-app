@@ -17,10 +17,10 @@ function App() {
   return (
     <div className="App">
       <header>
-        <TeamsDropdown NBAAllTeamData = {NBAAllTeamData} getSelectedTeamsSeasonData = {getSelectedTeamsSeasonData}/>
-        <TeamSelected NBAAllTeamData = {NBAAllTeamData} selectedTeamID = {selectedTeamID}/>
+        <TeamsDropdown NBAAllTeamData = {NBAAllTeamData.data} getSelectedTeamsSeasonData = {getSelectedTeamsSeasonData}/>
+        <TeamSelected NBAAllTeamData = {NBAAllTeamData.data} selectedTeamID = {selectedTeamID}/>
       </header>
-        <NBADataTables selectedTeamID = {selectedTeamID} NBAAllTeamData = {NBAAllTeamData} selectedTeamsSeasonData = {selectedTeamsSeasonData}/>
+        <NBADataTables selectedTeamID = {selectedTeamID} NBAAllTeamData = {NBAAllTeamData.data} selectedTeamsSeasonData = {selectedTeamsSeasonData.data}/>
     </div>
   )
 }

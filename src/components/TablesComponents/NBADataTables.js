@@ -13,7 +13,7 @@ export default function NBADataTables({selectedTeamID, NBAAllTeamData, selectedT
   return (
     <div className = 'gridTables'>
       <SeasonTable selectedTeamsSeasonData = {selectedTeamsSeasonData} selectedTeamID = {selectedTeamID} NBAAllTeamData = {NBAAllTeamData} getGameStats = {getGameStats}/>
-      <PlayerStatsTable gameStats = {gameStats}/>
+      <PlayerStatsTable gameStats = {gameStats.data}/>
     </div>
   )
 }

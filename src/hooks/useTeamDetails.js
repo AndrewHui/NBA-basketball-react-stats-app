@@ -3,21 +3,58 @@ import axios from 'axios'
 
 export default function useTeamDetails() {
 
-  const [NBAAllTeamData, setNBAAllTeamData] = useState([])
+  const [NBAAllTeamData, setNBAAllTeamData] = useState({
+    data: [],
+    statusCode: 200,
+    statusText: ''
+  })
   const [selectedTeamID, setSelectedTeamID] = useState()
-  const [selectedTeamsSeasonData, setSelectedTeamsSeasonData] = useState([])
+  const [selectedTeamsSeasonData, setSelectedTeamsSeasonData] = useState({
+    data: [],
+    statusCode: 200,
+    statusText: ''
+  })
 
   const getSelectedTeamsSeasonData = async (teamID) => {
-    setSelectedTeamID(teamID)
-    const data = await axios.get(`https://www.balldontlie.io/api/v1/games?seasons[]=2019&team_ids[]=${teamID}`)
-    setSelectedTeamsSeasonData(data.data.data)
+    try {
+      setSelectedTeamID(teamID)
+      const response = await axios.get(`https://www.balldontlie.io/api/v1/games?seasons[]=2019&team_ids[]=${teamID}`)
+      setSelectedTeamsSeasonData(previousState => ({
+        ...previousState,
+        data: response.data.data,
+        statusCode: response.status,
+        statusText: response.statusText
+      }))
+    }
+    catch(response) {
+      setSelectedTeamsSeasonData(previousState => ({
+        ...previousState,
+        statusCode: response.status,
+        statusText: response.statusText
+      }))
+    }
   }
 
   useEffect(async () => {
-    const NBAAllTeamData = await axios.get('https://www.balldontlie.io/api/v1/teams')
-    setNBAAllTeamData(NBAAllTeamData.data.data)
-  }, [])
+    try {
+      const NBAAllTeamDataResponse = await axios.get('https://www.balldontlie.io/api/v1/teams')
 
+      setNBAAllTeamData(previousState => ({
+        ...previousState, 
+        data: NBAAllTeamDataResponse.data.data,
+        statusCode: NBAAllTeamDataResponse.status,
+        statusText: NBAAllTeamDataResponse.statusText
+      }))
+    }
+    catch(response) {
+      setNBAAllTeamData(previousState => ({
+        ...previousState, 
+        statusCode: response.status,
+        statusText: response.statusText}
+      ))
+      throw new Error(`${NBAAllTeamData.statusCode} error: ${NBAAllTeamData.statusText}`)
+    }
+  }, [])
 
   return {
     selectedTeamsSeasonData, 

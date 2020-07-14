@@ -10,7 +10,7 @@ export default function TeamsDropdown({NBAAllTeamData, getSelectedTeamsSeasonDat
 
   return (
     <div class="dropdown">
-      <button onclick="myFunction()" class="dropbtn">Teams</button>
+      <button class="dropbtn">Teams</button>
       <div id="myDropdown" class="dropdown-content">
         {listTeams(NBAAllTeamData)}
       </div>
