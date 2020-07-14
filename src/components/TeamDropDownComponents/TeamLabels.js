@@ -1,9 +1,9 @@
 import React from 'react'
 
 
-export default function TeamLabels({teamData, setTeamID}) {  
+export default function TeamLabels({teamData, getSelectedTeamsSeasonData}) {  
 
   return (
-    <a onClick = {() => setTeamID(teamData.id)}>{teamData.abbreviation}</a>
+    <a onClick = {() => getSelectedTeamsSeasonData(teamData.id)}>{teamData.abbreviation}</a>
   )
 }

@@ -3,7 +3,7 @@ import SeasonTable from './SeasonTableComponents/SeasonTable'
 import PlayerStatsTable from './PlayerStatsComponents/PlayerStatsTable'
 import useGameStats from '../../hooks/useGameStats'
 
-export default function NBADataTables({selectedTeamID, NBATeamData, selectedTeamsSeasonData}) {  
+export default function NBADataTables({selectedTeamID, NBAAllTeamData, selectedTeamsSeasonData}) {  
 
   const {
     getGameStats, 
@@ -12,7 +12,7 @@ export default function NBADataTables({selectedTeamID, NBATeamData, selectedTeam
 
   return (
     <div className = 'gridTables'>
-      <SeasonTable selectedTeamsSeasonData = {selectedTeamsSeasonData} selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} getGameStats = {getGameStats}/>
+      <SeasonTable selectedTeamsSeasonData = {selectedTeamsSeasonData} selectedTeamID = {selectedTeamID} NBAAllTeamData = {NBAAllTeamData} getGameStats = {getGameStats}/>
       <PlayerStatsTable gameStats = {gameStats}/>
     </div>
   )

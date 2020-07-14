@@ -2,17 +2,17 @@ import React from 'react'
 import TeamLabels from './TeamLabels'
 
 
-export default function TeamsDropdown({NBATeamData, setTeamID}) {
+export default function TeamsDropdown({NBAAllTeamData, getSelectedTeamsSeasonData}) {
 
-  const listTeams = (NBATeamData) => {
-    return NBATeamData.map(teamData => <TeamLabels teamData = {teamData} setTeamID = {setTeamID}/>)
+  const listTeams = (NBAAllTeamData) => {
+    return NBAAllTeamData.map(teamData => <TeamLabels teamData = {teamData} getSelectedTeamsSeasonData = {getSelectedTeamsSeasonData}/>)
   }
 
   return (
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Teams</button>
       <div id="myDropdown" class="dropdown-content">
-        {listTeams(NBATeamData)}
+        {listTeams(NBAAllTeamData)}
       </div>
     </div>
   )

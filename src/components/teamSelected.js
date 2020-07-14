@@ -1,13 +1,13 @@
 import React from 'react'
 
-export default function TeamSelected({NBATeamData, selectedTeamID}) {
+export default function TeamSelected({NBAAllTeamData, selectedTeamID}) {
 
-  const getTeamAbbreviation = (NBATeamData, selectedTeamID) => {
-    return NBATeamData[selectedTeamID - 1].abbreviation
+  const getTeamAbbreviation = (NBAAllTeamData, selectedTeamID) => {
+    return NBAAllTeamData[selectedTeamID - 1].abbreviation
   }
   
   return (
-    <div className = 'teamSelected'>Team selected: {selectedTeamID ? getTeamAbbreviation(NBATeamData, selectedTeamID) : ''}
+    <div className = 'teamSelected'>Team selected: {selectedTeamID ? getTeamAbbreviation(NBAAllTeamData, selectedTeamID) : ''}
     </div>
   )
 }

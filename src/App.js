@@ -9,18 +9,18 @@ function App() {
   
   const {
     selectedTeamsSeasonData, 
-    updateSelectedTeamsSeasonData, 
-    NBATeamData, 
+    getSelectedTeamsSeasonData, 
+    NBAAllTeamData, 
     selectedTeamID
   } = useTeamDetails()
 
   return (
     <div className="App">
       <header>
-        <TeamsDropdown NBATeamData = {NBATeamData} setTeamID = {updateSelectedTeamsSeasonData}/>
-        <TeamSelected NBATeamData = {NBATeamData} selectedTeamID = {selectedTeamID}/>
+        <TeamsDropdown NBAAllTeamData = {NBAAllTeamData} getSelectedTeamsSeasonData = {getSelectedTeamsSeasonData}/>
+        <TeamSelected NBAAllTeamData = {NBAAllTeamData} selectedTeamID = {selectedTeamID}/>
       </header>
-        <NBADataTables selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} selectedTeamsSeasonData = {selectedTeamsSeasonData}/>
+        <NBADataTables selectedTeamID = {selectedTeamID} NBAAllTeamData = {NBAAllTeamData} selectedTeamsSeasonData = {selectedTeamsSeasonData}/>
     </div>
   )
 }
