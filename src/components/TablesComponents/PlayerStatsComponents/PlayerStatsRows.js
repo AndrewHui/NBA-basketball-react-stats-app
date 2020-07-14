@@ -1,5 +1,7 @@
 import React from 'react'
 
+// Displays individual player stats in table rows
+
 export default function PlayerStatsRows({playerData}) {  
 
   return (

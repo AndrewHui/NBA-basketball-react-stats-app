@@ -1,6 +1,8 @@
 import React from 'react'
 import PlayerStatsRows from './PlayerStatsRows'
 
+// Simple table that will map through an array of players to display the player statitstics.
+
 export default function PlayerStatsTable({gameStats}) {
 
   return (

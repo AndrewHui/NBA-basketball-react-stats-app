@@ -1,6 +1,9 @@
 import {useState} from 'react'
 import axios from 'axios'
 
+
+ // Pulls from API that displays game stats depending on provided gameID. Also manages error handling with statusCode and statusText.
+
 export default function useGameStats() {
 
   const [gameStats, setGameStats] = useState({

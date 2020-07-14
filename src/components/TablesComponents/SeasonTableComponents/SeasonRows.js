@@ -1,6 +1,8 @@
 import React from 'react'
 import moment from 'moment'
 
+// Component displays individual games from the 2019 season of the selected team. Also highlights the abbreviation of the selected team.
+
 export default function SeasonRows({game, selectedTeamID, NBAAllTeamData, getGameStats}) {  
 
   const formatDate = (game) => {
@@ -8,10 +10,10 @@ export default function SeasonRows({game, selectedTeamID, NBAAllTeamData, getGam
   }
 
   const highlightSelectedTeam = (selectedTeamID, NBAAllTeamData, teamAbbreviation) => {
-    return isHomeTeam(selectedTeamID, NBAAllTeamData, teamAbbreviation) ? 'abbreviation-highlight' : ''
+    return isSelectedTeam(selectedTeamID, NBAAllTeamData, teamAbbreviation) ? 'abbreviation-highlight' : ''
   }
 
-  const isHomeTeam = (selectedTeamID, NBAAllTeamData, teamAbbreviation) => {
+  const isSelectedTeam = (selectedTeamID, NBAAllTeamData, teamAbbreviation) => {
     return NBAAllTeamData[selectedTeamID - 1].abbreviation === teamAbbreviation
   }
 

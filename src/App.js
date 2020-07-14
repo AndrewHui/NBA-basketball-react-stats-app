@@ -8,7 +8,9 @@ import ErrorComponent from './components/ErrorComponent'
 import {assessStatusCode} from './util/helper'
 
 function App() {
-  
+
+  // Split web app into two parts: team selection and table stats.  Team selection won't load if error in API. Data tables manage error handling in next component.
+
   const {
     selectedTeamsSeasonData, 
     getSelectedTeamsSeasonData, 

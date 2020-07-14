@@ -1,6 +1,8 @@
 import React from 'react'
 import SeasonRows from './SeasonRows'
 
+// Simple table that will map through an array of 2019 games to display the game scores
+
 export default function SeasonTable({selectedTeamsSeasonData, selectedTeamID, NBAAllTeamData, getGameStats}) {
 
   const listGames = (selectedTeamsSeasonData) => {

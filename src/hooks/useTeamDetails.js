@@ -15,6 +15,8 @@ export default function useTeamDetails() {
     statusText: ''
   })
 
+   // Pulls from API that displays the selected teams season data. Also manages error handling with statusCode and statusText.
+
   const getSelectedTeamsSeasonData = async (teamID) => {
     try {
       setSelectedTeamID(teamID)
@@ -34,6 +36,8 @@ export default function useTeamDetails() {
       }))
     }
   }
+
+   // Upon render, pulls from teams API to set state of the NBAAllTeamData. Also manages error handling with statusCode and statusText.
 
   useEffect(async () => {
     try {

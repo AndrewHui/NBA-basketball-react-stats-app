@@ -5,6 +5,8 @@ import useGameStats from '../../hooks/useGameStats'
 import {assessStatusCode} from '../../util/helper'
 import ErrorComponent from '../ErrorComponent'
 
+// Displays our Stats table components. Display of component is contingent on status codes from api responses.
+
 export default function NBADataTables({selectedTeamID, NBAAllTeamData, selectedTeamsSeasonData}) {  
 
   const {
