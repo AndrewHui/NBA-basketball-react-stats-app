@@ -1,10 +1,10 @@
 import React from 'react'
 import GridRow from './gridRow'
 
-export default function GridDisplay({teamOneNBAData, teamIDOne, NBATeamData, setGame, updateGameDetails}) {
+export default function GridDisplay({teamOneNBAData, teamIDOne, NBATeamData,updateGameDetails}) {
 
   const listGames = (teamOneNBAData) => {
-    return teamOneNBAData.map(teamGameData => <GridRow teamGameData = {teamGameData} teamIDOne = {teamIDOne} NBATeamData = {NBATeamData} setGame = {setGame} updateGameDetails = {updateGameDetails}/>)
+    return teamOneNBAData.map(teamGameData => <GridRow teamGameData = {teamGameData} teamIDOne = {teamIDOne} NBATeamData = {NBATeamData} updateGameDetails = {updateGameDetails}/>)
   }
   
 return <div>

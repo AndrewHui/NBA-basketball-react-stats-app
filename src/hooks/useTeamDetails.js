@@ -1,12 +1,11 @@
 import {useState, useEffect} from 'react'
 import axios from 'axios'
 
-export default function GetDashboardData() {
+export default function useTeamDetails() {
 
   const [NBATeamData, setNBATeamData] = useState([])
   const [teamIDOne, setTeamIDOne] = useState()
   const [teamOneNBAData, setTeamOneNBAData] = useState([])
-  const [game, setGame] = useState({})
   const [gameDetails, setGameDetails] = useState([])
 
   const updateTeamOneNBAData = async (teamID) => {
@@ -26,5 +25,5 @@ export default function GetDashboardData() {
   }, [])
 
 
-  return {game, setGame, teamOneNBAData, updateTeamOneNBAData, NBATeamData, teamIDOne, updateGameDetails, gameDetails}
+  return {teamOneNBAData, updateTeamOneNBAData, NBATeamData, teamIDOne, updateGameDetails, gameDetails}
 }

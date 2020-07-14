@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
-import useApplicationData from './hooks/useApplicationData'
+import useTeamDetails from './hooks/useTeamDetails'
 import TeamDropdown from './components/teamDropDown/teamDropdown'
 import GridDisplay from './components/gamesDisplayComponents/gridDisplay'
 import PlayerGridDisplay from './components/playerDisplay/playerGridDisplay'
@@ -8,8 +8,7 @@ import TeamSelected from './components/teamSelected'
 
 function App() {
   
-  const {game, setGame, teamOneNBAData, updateTeamOneNBAData, NBATeamData, teamIDOne, updateGameDetails, gameDetails} = useApplicationData()
-
+  const {teamOneNBAData, updateTeamOneNBAData, NBATeamData, teamIDOne, updateGameDetails, gameDetails} = useTeamDetails()
 
   return (
     <div className="App">
@@ -18,7 +17,7 @@ function App() {
         <TeamSelected NBATeamData = {NBATeamData} teamIDOne = {teamIDOne}/>
       </header>
       <body>
-        <GridDisplay teamOneNBAData = {teamOneNBAData} teamIDOne = {teamIDOne} NBATeamData = {NBATeamData} setGame = {setGame} updateGameDetails = {updateGameDetails}/>
+        <GridDisplay teamOneNBAData = {teamOneNBAData} teamIDOne = {teamIDOne} NBATeamData = {NBATeamData} updateGameDetails = {updateGameDetails}/>
         <PlayerGridDisplay gameDetails = {gameDetails}/>
       </body>
     </div>

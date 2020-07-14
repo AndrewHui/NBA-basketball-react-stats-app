@@ -1,7 +1,7 @@
 import React from 'react'
 import moment from 'moment'
 
-export default function GridRow({teamGameData, teamIDOne, NBATeamData, setGame, updateGameDetails}) {  
+export default function GridRow({teamGameData, teamIDOne, NBATeamData, updateGameDetails}) {  
 
   const formatDate = (teamGameData) => {
     return moment(teamGameData.date).format(("MMM Do YYYY"))
@@ -16,7 +16,6 @@ export default function GridRow({teamGameData, teamIDOne, NBATeamData, setGame, 
   }
 
   const clickDetails = () => {
-    setGame(teamGameData.id)
     updateGameDetails(teamGameData.id)
   }
   
