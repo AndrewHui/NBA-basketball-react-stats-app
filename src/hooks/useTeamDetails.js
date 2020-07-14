@@ -52,7 +52,6 @@ export default function useTeamDetails() {
         statusCode: response.status,
         statusText: response.statusText}
       ))
-      throw new Error(`${NBAAllTeamData.statusCode} error: ${NBAAllTeamData.statusText}`)
     }
   }, [])
 
