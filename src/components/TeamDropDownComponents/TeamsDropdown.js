@@ -1,6 +1,7 @@
 import React from 'react'
 import TeamLabels from './TeamLabels'
 
+// Scrollable dropdown menu that maps through an array of teams to display all the teams.
 
 export default function TeamsDropdown({NBAAllTeamData, getSelectedTeamsSeasonData}) {
 
