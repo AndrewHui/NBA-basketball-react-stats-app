@@ -5,8 +5,8 @@ export default function PlayerStatsTable({gameDetails}) {
 
   return (
     <div className='playerGrid'>
-      <table class="table">
-        <thead class="thead-dark">
+      <table>
+        <thead>
           <tr>
             <th scope="col">Player</th>
             <th scope="col">Team</th>

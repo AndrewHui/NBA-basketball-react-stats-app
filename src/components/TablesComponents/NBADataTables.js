@@ -1,6 +1,6 @@
 import React from 'react'
 import SeasonTable from './SeasonTableComponents/SeasonTable'
-import PlayerStatsTable from './PlayerStats/PlayerStatsTable'
+import PlayerStatsTable from './PlayerStatsComponents/PlayerStatsTable'
 import useGameDetails from '../../hooks/useGameDetails'
 
 export default function NBADataTables({selectedTeamID, NBATeamData, selectedTeamsSeasonData}) {  

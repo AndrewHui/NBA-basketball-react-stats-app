@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
 import useTeamDetails from './hooks/useTeamDetails'
-import TeamsDropdown from './components/teamDropDown/TeamsDropdown'
-import TeamSelected from './components/teamSelected'
-import NBADataTables from './components/Tables/NBADataTables'
+import TeamsDropdown from './components/TeamDropDownComponents/TeamsDropdown'
+import TeamSelected from './components/TeamSelected'
+import NBADataTables from './components/TablesComponents/NBADataTables'
 
 function App() {
   
