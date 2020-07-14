@@ -13,6 +13,7 @@ This is a NBA Stats React app that will allow you to select and view NBA games f
 ### Any improvements you would make to your application?
 
 * Better error tracking by implementing Sentry
+* Appropriate testing framework
 * Ensure quality of data by validating data types upon receiving API responses
 * Better data analytics that includes charting and custom metrics
 * Compare individual player stats with the player stats of selected game
