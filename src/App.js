@@ -1,27 +1,28 @@
-import React from 'react';
-import './App.css';
+import React from 'react'
+import './App.css'
 import useTeamDetails from './hooks/useTeamDetails'
 import TeamDropdown from './components/teamDropDown/teamDropdown'
-import GridDisplay from './components/gamesDisplayComponents/gridDisplay'
-import PlayerGridDisplay from './components/playerDisplay/playerGridDisplay'
 import TeamSelected from './components/teamSelected'
+import GridTables from './components/Tables/GridTables'
 
 function App() {
   
-  const {teamOneNBAData, updateTeamOneNBAData, NBATeamData, teamIDOne, updateGameDetails, gameDetails} = useTeamDetails()
+  const {
+    selectedTeamsSeasonData, 
+    updateSelectedTeamsSeasonData, 
+    NBATeamData, 
+    selectedTeamID
+  } = useTeamDetails()
 
   return (
     <div className="App">
       <header>
-        <TeamDropdown NBATeamData = {NBATeamData} setTeamID = {updateTeamOneNBAData}/>
-        <TeamSelected NBATeamData = {NBATeamData} teamIDOne = {teamIDOne}/>
+        <TeamDropdown NBATeamData = {NBATeamData} setTeamID = {updateSelectedTeamsSeasonData}/>
+        <TeamSelected NBATeamData = {NBATeamData} selectedTeamID = {selectedTeamID}/>
       </header>
-      <body>
-        <GridDisplay teamOneNBAData = {teamOneNBAData} teamIDOne = {teamIDOne} NBATeamData = {NBATeamData} updateGameDetails = {updateGameDetails}/>
-        <PlayerGridDisplay gameDetails = {gameDetails}/>
-      </body>
+        <GridTables selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} selectedTeamsSeasonData = {selectedTeamsSeasonData}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

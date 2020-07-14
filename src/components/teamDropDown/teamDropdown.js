@@ -8,10 +8,12 @@ export default function TeamDropdown({NBATeamData, setTeamID}) {
     return NBATeamData.map(teamData => <EachTeamDropdown teamData = {teamData} setTeamID = {setTeamID}/>)
   }
 
-  return <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Teams</button>
-    <div id="myDropdown" class="dropdown-content">
-      {listTeams(NBATeamData)}
-  </div>
-</div>
+  return (
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Teams</button>
+      <div id="myDropdown" class="dropdown-content">
+        {listTeams(NBATeamData)}
+      </div>
+    </div>
+  )
 }

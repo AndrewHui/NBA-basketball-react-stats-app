@@ -4,19 +4,13 @@ import axios from 'axios'
 export default function useTeamDetails() {
 
   const [NBATeamData, setNBATeamData] = useState([])
-  const [teamIDOne, setTeamIDOne] = useState()
-  const [teamOneNBAData, setTeamOneNBAData] = useState([])
-  const [gameDetails, setGameDetails] = useState([])
+  const [selectedTeamID, setSelectedTeamID] = useState()
+  const [selectedTeamsSeasonData, setSelectedTeamsSeasonData] = useState([])
 
-  const updateTeamOneNBAData = async (teamID) => {
-    setTeamIDOne(teamID)
+  const updateSelectedTeamsSeasonData = async (teamID) => {
+    setSelectedTeamID(teamID)
     const data = await axios.get(`https://www.balldontlie.io/api/v1/games?seasons[]=2019&team_ids[]=${teamID}`)
-    setTeamOneNBAData(data.data.data)
-  }
-
-  const updateGameDetails = async (gameID) => {
-    const data = await axios.get(`https://www.balldontlie.io/api/v1/stats?game_ids[]=${gameID}`)
-    setGameDetails(data.data.data)
+    setSelectedTeamsSeasonData(data.data.data)
   }
 
   useEffect(async () => {
@@ -25,5 +19,10 @@ export default function useTeamDetails() {
   }, [])
 
 
-  return {teamOneNBAData, updateTeamOneNBAData, NBATeamData, teamIDOne, updateGameDetails, gameDetails}
+  return {
+    selectedTeamsSeasonData, 
+    updateSelectedTeamsSeasonData,
+    NBATeamData, 
+    selectedTeamID
+  }
 }

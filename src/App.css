@@ -58,7 +58,7 @@ header {
   margin-top: 15px;
 }
 
-body {
+.gridTables {
   display: flex;
   justify-content: space-evenly;
 }
