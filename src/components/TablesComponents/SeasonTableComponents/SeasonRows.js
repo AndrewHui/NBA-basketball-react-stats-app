@@ -4,7 +4,7 @@ import moment from 'moment'
 export default function SeasonRows({game, selectedTeamID, NBAAllTeamData, getGameStats}) {  
 
   const formatDate = (game) => {
-    return moment(game.date).format(("MMM Do YYYY"))
+    return moment(game.date).format(('MMM Do YYYY'))
   }
 
   const highlightSelectedTeam = (selectedTeamID, NBAAllTeamData, teamAbbreviation) => {

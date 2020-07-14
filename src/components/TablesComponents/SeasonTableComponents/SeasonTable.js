@@ -12,10 +12,10 @@ export default function SeasonTable({selectedTeamsSeasonData, selectedTeamID, NB
       <table>
         <thead>
           <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Home</th>
-            <th scope="col">Score</th>
-            <th scope="col">Away</th>
+            <th scope='col'>Date</th>
+            <th scope='col'>Home</th>
+            <th scope='col'>Score</th>
+            <th scope='col'>Away</th>
           </tr>
         </thead>
         <tbody>

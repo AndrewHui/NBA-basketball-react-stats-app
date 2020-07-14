@@ -8,13 +8,13 @@ export default function PlayerStatsTable({gameStats}) {
       <table>
         <thead>
           <tr>
-            <th scope="col">Player</th>
-            <th scope="col">Team</th>
-            <th scope="col">Points</th>
-            <th scope="col">Assists</th>
-            <th scope="col">Rebounds</th>
-            <th scope="col">Steals</th>
-            <th scope="col">Blocks</th>
+            <th scope='col'>Player</th>
+            <th scope='col'>Team</th>
+            <th scope='col'>Points</th>
+            <th scope='col'>Assists</th>
+            <th scope='col'>Rebounds</th>
+            <th scope='col'>Steals</th>
+            <th scope='col'>Blocks</th>
           </tr>
         </thead>
         <tbody>

@@ -17,7 +17,7 @@ function App() {
   } = useTeamDetails()
 
   return (
-    <div className="App">
+    <div className='App'>
       {assessStatusCode(NBAAllTeamData.statusCode) ? (
         <header>
           <TeamsDropdown NBAAllTeamData = {NBAAllTeamData.data} getSelectedTeamsSeasonData = {getSelectedTeamsSeasonData}/>
@@ -26,7 +26,7 @@ function App() {
       ) : (
         <ErrorComponent/>
       )}
-      
+
       <NBADataTables selectedTeamID = {selectedTeamID} NBAAllTeamData = {NBAAllTeamData.data} selectedTeamsSeasonData = {selectedTeamsSeasonData}/>
     </div>
   )
