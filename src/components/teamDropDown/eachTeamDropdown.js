@@ -9,6 +9,6 @@ export default function EachTeamDropdown({teamData, setTeamID}) {
   }
 
   return (
-    <a href="" onClick ={handleClick}>{teamData.abbreviation}</a>
+    <a onClick ={handleClick}>{teamData.abbreviation}</a>
   )
 }

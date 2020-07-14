@@ -3,7 +3,6 @@ import GridRow from './gridRow'
 
 export default function GridDisplay({selectedTeamsSeasonData, selectedTeamID, NBATeamData,updateGameDetails}) {
 
-  console.log(selectedTeamID)
   const listGames = (selectedTeamsSeasonData) => {
     return selectedTeamsSeasonData.map(teamGameData => <GridRow teamGameData = {teamGameData} selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} updateGameDetails = {updateGameDetails}/>)
   }

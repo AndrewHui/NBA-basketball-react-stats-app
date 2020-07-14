@@ -15,12 +15,8 @@ export default function GridRow({teamGameData, selectedTeamID, NBATeamData, upda
     return NBATeamData[selectedTeamID - 1].abbreviation === teamAbbreviation
   }
 
-  const clickDetails = () => {
-    updateGameDetails(teamGameData.id)
-  }
-
   return (
-    <tr onClick={()=> clickDetails()}>
+    <tr onClick={()=> updateGameDetails(teamGameData.id)}>
       <td>{formatDate(teamGameData)}</td>
       <td className={validateSelectedTeam(selectedTeamID, NBATeamData, teamGameData.home_team.abbreviation)}>{teamGameData.home_team.abbreviation}</td>
       <td>{`${teamGameData.home_team_score} - ${teamGameData.visitor_team_score}`}</td>
