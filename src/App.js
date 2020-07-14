@@ -1,9 +1,9 @@
 import React from 'react'
 import './App.css'
 import useTeamDetails from './hooks/useTeamDetails'
-import TeamDropdown from './components/teamDropDown/teamDropdown'
+import TeamsDropdown from './components/teamDropDown/TeamsDropdown'
 import TeamSelected from './components/teamSelected'
-import GridTables from './components/Tables/GridTables'
+import NBADataTables from './components/Tables/NBADataTables'
 
 function App() {
   
@@ -17,10 +17,10 @@ function App() {
   return (
     <div className="App">
       <header>
-        <TeamDropdown NBATeamData = {NBATeamData} setTeamID = {updateSelectedTeamsSeasonData}/>
+        <TeamsDropdown NBATeamData = {NBATeamData} setTeamID = {updateSelectedTeamsSeasonData}/>
         <TeamSelected NBATeamData = {NBATeamData} selectedTeamID = {selectedTeamID}/>
       </header>
-        <GridTables selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} selectedTeamsSeasonData = {selectedTeamsSeasonData}/>
+        <NBADataTables selectedTeamID = {selectedTeamID} NBATeamData = {NBATeamData} selectedTeamsSeasonData = {selectedTeamsSeasonData}/>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
-import EachTeamDropdown from './eachTeamDropdown'
+import TeamLabels from './TeamLabels'
 
 
-export default function TeamDropdown({NBATeamData, setTeamID}) {
+export default function TeamsDropdown({NBATeamData, setTeamID}) {
 
   const listTeams = (NBATeamData) => {
-    return NBATeamData.map(teamData => <EachTeamDropdown teamData = {teamData} setTeamID = {setTeamID}/>)
+    return NBATeamData.map(teamData => <TeamLabels teamData = {teamData} setTeamID = {setTeamID}/>)
   }
 
   return (

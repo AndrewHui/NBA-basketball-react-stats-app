@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PlayerGridRow({playerData}) {  
+export default function PlayerStatsRows({playerData}) {  
 
   return (
     <tr>

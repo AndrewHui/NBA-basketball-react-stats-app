@@ -1,7 +1,7 @@
 import React from 'react'
-import PlayerGridRow from './playerGridRows'
+import PlayerStatsRows from './PlayerStatsRows'
 
-export default function PlayerGridDisplay({gameDetails}) {
+export default function PlayerStatsTable({gameDetails}) {
 
   return (
     <div className='playerGrid'>
@@ -18,7 +18,7 @@ export default function PlayerGridDisplay({gameDetails}) {
           </tr>
         </thead>
         <tbody>
-          {gameDetails.map(player => <PlayerGridRow playerData = {player}/>)}
+          {gameDetails.map(player => <PlayerStatsRows playerData = {player}/>)}
         </tbody>
       </table>
     </div>
